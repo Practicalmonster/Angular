@@ -1,3 +1,3 @@
-## seperating components
-## propertyBinding
-## eventBbinding
+## Seperating Components
+## Property Binding
+## Event Binding
