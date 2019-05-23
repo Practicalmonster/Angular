@@ -1,0 +1,35 @@
+<div style="text-align: center">
+    <div class="rounded-left" style=" overflow:hidden; display:inline-block;min-width: 300px;">
+        <div class="fluid-container">
+            <div class="row mx-auto bg-dark text-light">
+              <p class="col-12">
+                hey
+              </p>
+            </div>
+            <div class="row mx-auto"
+            *ngFor="let task of generateArray(Todo)"
+            style="cursor: pointer"
+            (click)="removeItem($event)">
+              <p class="col-12">{{task}}</p>
+            </div>
+            <div class="row mx-auto">
+              <p class="col-12">
+                {{task}}
+              </p>
+            </div>
+            <div class="row mx-auto">
+              <div class="col-10 p-0">
+                <input type="text" class="form-control"
+                [value]="task"
+                (input)="OnChangeInput($event)"
+                (keydown.enter)="pushTask()">
+              </div>
+              <div class="col p-0">
+                <button class="btn btn-primary rounded-right font-weight-bold"
+                (click)="pushTask()"
+                >+</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
