@@ -1,0 +1,6 @@
+<div class="row mx-auto"
+            *ngFor="let task of tasks"
+            style="cursor: pointer"
+            (click)="OnClick($event)">
+            <p class="col-12">{{task}}</p>
+</div>
